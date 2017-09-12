@@ -1,0 +1,56 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:gwt.material.design.components.client.ui">
+
+	<ui:with field='res' type='br.com.emi.web.client.resources.IResources' />
+	<ui:with field='mes' type='br.com.emi.web.client.resources.IMessages' />
+
+	<ui:style>
+	body, html {
+		min-height: 100%;
+		height: 100%;
+	}
+	</ui:style>
+
+	<m:MaterialContent backgroundColor="MDC_THEME_PRIMARY"
+		minHeight="100%" height="100%" backgroundImageResource="{res.background}">
+
+		<m:MaterialToolbar type="WATERFALL" backgroundColor="TRANSPARENT">
+
+			<m:MaterialToolbarRow>
+
+				<m:MaterialToolbarSection align="START">
+					<m:MaterialImage resource="{res.logo}" height="40px" hideOn="DESKTOP" />
+				</m:MaterialToolbarSection>
+
+				<m:MaterialToolbarSection align="END" paddingRight="16">
+					<m:MaterialButton text="{mes.act_login}" type="SECONDARY_STROKED" />
+				</m:MaterialToolbarSection>
+
+			</m:MaterialToolbarRow>
+
+		</m:MaterialToolbar>
+
+		<m:MaterialContent width="100%" minHeight="calc(100% - 32px)" padding="16"
+			display="FLEX" flexAlignItems="CENTER" flexAlignContent="CENTER"
+			flexJustifyContent="CENTER" flexDirection="COLUMN" background="rgba(0,0,0,0.55)">
+
+			<m:MaterialImage resource="{res.logo}" height="96px"
+				opacity="0.85" hideOn="PHONE_TABLET" marginBottom="24"/>
+
+			<m:MaterialLabel ui:field="titleLbl" maxWidth="1028px" typography="DISPLAY_4" 
+				textAlign="CENTER" textColor="MDC_THEME_TEXT_PRIMARY_ON_PRIMARY"
+				text="{mes.lbl_home_title}" margin="16" marginTop="72" marginBottom="0"/>
+
+			<m:MaterialLabel ui:field="descriptionLbl" maxWidth="1028px" typography="HEADLINE" margin="16" marginTop="0"
+				textAlign="CENTER" textColor="MDC_THEME_TEXT_PRIMARY_ON_PRIMARY"
+				text="{mes.lbl_home_description}" />
+
+			<m:MaterialButton ui:field="registerAct" text="{mes.act_register}" type="SECONDARY_RAISED"
+				marginTop="24" />
+
+		</m:MaterialContent>
+
+	</m:MaterialContent>
+
+</ui:UiBinder> 
